@@ -1,0 +1,61 @@
+p {
+    text-align: right;
+}
+.calc {
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(45deg, rgb(247, 213, 213), rgb(132, 132, 241));
+width: 100vw;
+height: 100vh;
+}
+
+.container {
+    display: inline-grid;
+    border-radius: 10px;
+    border: 7px solid rgb(49, 48, 48);
+    background: linear-gradient(45deg, rgb(245, 71, 71), rgb(59, 59, 245));
+    grid-template: 
+        [row1-start] "display display display display" 103px [row1-end]
+        [row2-start] "clear delete percentage divide" 100px [row2-end]
+        [row3-start] "nine eight seven multiply" 100px [row3-end]
+        [row4-start] "six five four plus" 100px [row4-end]
+        [row5-start] "three two one minus" 100px [row5-end]
+        [row6-start] "zero decimal sign equal" 100px [row6-end]
+        / 1fr 1fr 1fr 1fr;
+    }
+
+.display {
+    grid-area: display;
+    height: 100%;
+    width: 100%;
+    width: 1fr;
+    background: white;
+    border-radius: 0px;
+    border-bottom: 3px solid black;
+    display: grid;
+    place-content: end;
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+
+button {
+    grid-area: button;
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(99, 99, 99);
+    font-size: 25px;
+    color: black;
+    background: hsla(289, 100%, 75%, 0.5);
+    border-radius: 5px;
+
+
+}
+
+
+
+
+
+/* .clicked { * }/
